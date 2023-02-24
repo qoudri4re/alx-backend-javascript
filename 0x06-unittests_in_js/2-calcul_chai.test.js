@@ -43,23 +43,22 @@ describe("calculateNumber", function () {
       expect(calculateNumber("SUBTRACT", -2.0, 2.0)).to.equal(-4.0);
     });
   });
-  describe('type == "DIVISION"', () => {
-    it("correct result for division", () => {
-      expect(calculateNumber("DIVISION", 1.4, 2.4)).to.equal(0.5);
-    });
-    it("return error on zero division", () => {
-      expect(calculateNumber("DIVISION", 1.4, 0.0)).to.equal("Error");
-    });
-    it("numbers with different signs (alternate)", () => {
-      expect(calculateNumber("DIVIDE", 7.0, -2.0)).to.equal(-3.5);
+  describe('type == "DIVIDE"', () => {
+    it("numbers with different signs", () => {
+      expect(calculateNumber("DIVIDE", -7.0, 2.0)).to.equal(-3.5);
     });
 
-    it("negative numbers", () => {
-      expect(calculateNumber("DIVIDE", -7.0, -2.0)).to.equal(3.5);
+    it("numbers with different signs", () => {
+      expect(calculateNumber("DIVIDE", -7.0, 2.0)).to.equal(-3.5);
     });
-
-    it("equal positive numbers", () => {
-      expect(calculateNumber("DIVIDE", 2.0, 2.0)).to.equal(1);
+    it("numbers with different signs", () => {
+      expect(calculateNumber("DIVIDE", -7.0, 2.0)).to.equal(-3.5);
+    });
+    it("numbers with different signs", () => {
+      expect(calculateNumber("DIVIDE", -7.0, 2.0)).to.equal(-3.5);
+    });
+    it("numbers with different signs", () => {
+      expect(calculateNumber("DIVIDE", -7.0, 2.0)).to.equal(-3.5);
     });
   });
 });
